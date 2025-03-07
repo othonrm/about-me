@@ -3,14 +3,126 @@
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Othon - About Me</title>
+    <style>
+      /* Variables */
+      :root {
+        --footerHeight: 3rem;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        /*
+          * Why the above:
+          * https://medium.com/web-dev-survey-from-kyoto/survey-system-font-stack-5f73a3b39776
+        */
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+
+      main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
+
+      .title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #222;
+      }
+      .greeting {
+        margin-top: 2rem;
+        font-size: 1rem;
+        margin: 0;
+        line-height: 1.5;
+        color: #666;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 24rem;
+      }
+
+      .portrait {
+        border-radius: 1rem;
+        width: 30%;
+        aspect-ratio: 9/10;
+        object-fit: cover;
+        margin-right: 4rem;
+        opacity: 0.75;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+      }
+
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: var(--footerHeight);
+        background-color: #f0f0f0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 0.75rem;
+        color: #666;
+        gap: 0.5rem;
+        box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+
+        a {
+          color: #3d8ae2;
+        }
+      }
+
+      @media (max-width: 768px) {
+        body {
+          flex-direction: column;
+        }
+
+        .portrait {
+          border-radius: 1rem;
+          width: 80%;
+          max-height: 320px;
+          aspect-ratio: 9/10;
+          object-fit: cover;
+          margin-right: 0;
+          margin-bottom: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img
+        class="portrait"
+        src="/portrait.webp"
+        alt="Othon's Portrait at Agulhas Negras Peak, Brazil's 5th highest summit."
+      />
+      <div class="column">
+        <h1 class="title">Hello, I'm Othon</h1>
+        <p class="greeting">
+          This is the very beginning of my personal website.
+          <br />
+          I'm still working on it, so please be patient.
+        </p>
+      </div>
+    </main>
+    <footer>
+      <p>
+        <a href="https://github.com/othonrm">@othonrm</a> —
+        <span>March, 2025.</span>
+      </p>
+    </footer>
+  </body>
 </html>
