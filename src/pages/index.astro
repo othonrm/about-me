@@ -1,5 +1,6 @@
 ---
 import "../styles/main.css";
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <html lang="en">
@@ -25,7 +26,6 @@ import "../styles/main.css";
     <meta property="og:url" content="https://othonrm.com" />
     <meta property="og:image" content="https://othonrm.com/portrait.webp" />
     <meta property="og:site_name" content="Othon" />
-
     <title>Othon - About Me</title>
   </head>
   <body>
@@ -51,5 +51,6 @@ import "../styles/main.css";
         <span>March, 2025.</span>
       </p>
     </footer>
+    <Analytics />
   </body>
 </html>
